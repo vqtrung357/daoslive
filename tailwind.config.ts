@@ -52,21 +52,23 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
+        'fairy-lavender': '#B79CFF',
+        'fairy-gold': '#FFD876',
+        'fairy-pink': '#FFBCEC',
+        'fairy-teal': '#7FFFD4',
+        'dark-purple-1': '#0B0A12',
+        'dark-purple-2': '#15122B',
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        '2xl': '1rem',
+        '3xl': '1.5rem',
+      },
+      boxShadow: {
+        'glow-primary': '0 0 20px 5px rgba(183, 156, 255, 0.3)',
+        'glow-accent': '0 0 20px 5px rgba(255, 216, 118, 0.3)',
       },
       keyframes: {
         "accordion-down": {

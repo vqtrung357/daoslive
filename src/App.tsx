@@ -1,27 +1,28 @@
-import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
+import Home from "./pages/Home";
+import Discover from "./pages/Discover";
+import TokenDetail from "./pages/TokenDetail";
+import Launch from "./pages/Launch";
 import NotFound from "./pages/NotFound";
-
-const queryClient = new QueryClient();
+import MainLayout from "./components/layout/MainLayout";
+import { WalletProvider } from "./components/wallet/WalletContext";
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
+  <WalletProvider>
+    <Sonner theme="dark" position="bottom-right" />
+    <BrowserRouter>
+      <MainLayout>
         <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/" element={<Home />} />
+          <Route path="/discover" element={<Discover />} />
+          <Route path="/token/:id" element={<TokenDetail />} />
+          <Route path="/launch" element={<Launch />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+      </MainLayout>
+    </BrowserRouter>
+  </WalletProvider>
 );
 
 export default App;
