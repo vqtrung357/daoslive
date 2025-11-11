@@ -1,11 +1,42 @@
+import { useState } from "react";
+import { Navbar } from "@/components/Navbar";
+import { HeroSection } from "@/components/HeroSection";
+import { HighlightGrid } from "@/components/HighlightGrid";
+import { ProjectTable } from "@/components/ProjectTable";
+import { ScrollingTicker } from "@/components/ScrollingTicker";
+import { Footer } from "@/components/Footer";
+import { ConnectModal } from "@/components/ConnectModal";
+
 const Home = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isConnected, setIsConnected] = useState(false);
+  const [address, setAddress] = useState<string | null>(null);
+
+  const handleConnect = () => {
+    setIsConnected(true);
+    setAddress("0xAcA...39c0");
+    setIsModalOpen(false);
+  };
+
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-      <h1 className="text-5xl font-bold text-fairy-gold mb-4">Welcome to Fairy Launch</h1>
-      <p className="text-xl text-fairy-lavender">The magical gateway to the world of Solana Fair Launches.</p>
-      <div className="mt-12">
-        <p className="text-gray-300">Content for the Hero Spotlight, Trending Tokens, and other sections will be built here soon!</p>
-      </div>
+    <div className="bg-background">
+      <Navbar 
+        isConnected={isConnected} 
+        address={address} 
+        onConnectClick={() => setIsModalOpen(true)} 
+      />
+      <main>
+        <HeroSection />
+        <HighlightGrid />
+        <ProjectTable />
+        <ScrollingTicker />
+      </main>
+      <Footer />
+      <ConnectModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        onConnect={handleConnect} 
+      />
     </div>
   );
 };

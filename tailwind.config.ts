@@ -19,10 +19,18 @@ export default {
     },
     extend: {
       colors: {
+        background: "#07090D",
+        surface: "#0B0F14",
+        "text-primary": "#E8EDF2",
+        "text-secondary": "#AAB3BF",
+        "accent-green": "#3DFFB8",
+        "accent-red": "#FF6B91",
+        "accent-purple": "#B06AF9",
+        "accent-pink": "#FF53AE",
+        "accent-teal": "#33E5D1",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -52,45 +60,32 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        'fairy-lavender': '#B79CFF',
-        'fairy-gold': '#FFD876',
-        'fairy-pink': '#FFBCEC',
-        'fairy-teal': '#7FFFD4',
-        'dark-purple-1': '#0B0A12',
-        'dark-purple-2': '#15122B',
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-        '2xl': '1rem',
-        '3xl': '1.5rem',
-      },
-      boxShadow: {
-        'glow-primary': '0 0 20px 5px rgba(183, 156, 255, 0.3)',
-        'glow-accent': '0 0 20px 5px rgba(255, 216, 118, 0.3)',
+        "2xl": "1rem",
+        "3xl": "1.25rem",
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        scroll: 'scroll 40s linear infinite',
       },
     },
   },
