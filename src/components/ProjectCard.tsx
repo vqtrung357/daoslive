@@ -92,7 +92,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
             />
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-          <div className="absolute top-0 left-0 w-2/3 h-2/3 bg-radial-gradient(circle at 0% 0%, rgba(176, 106, 249, 0.2), transparent 40%)" />
+          <div className="absolute top-0 left-0 w-2/3 h-2/3 bg-[radial-gradient(circle_at_0%_0%,_rgba(176,106,249,0.2),_transparent_40%)]" />
 
           <div className="absolute top-4 right-4 bg-surface/50 backdrop-blur-md border border-white/10 rounded-full px-3 py-1 text-xs font-bold">
             ${project.marketCap}
