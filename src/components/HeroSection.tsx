@@ -4,7 +4,7 @@ export const HeroSection = () => {
   return (
     <section 
       className="relative -mt-[86px] pt-[86px] h-[600px] flex items-center"
-      style={{ backgroundImage: "url('/assets/hero/banner-hero.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+      style={{ backgroundImage: "url('/assets/banner-hero.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
       <div className="absolute inset-0 bg-black/60"></div>
       <div className="relative container mx-auto max-w-6xl px-6">
