@@ -35,7 +35,7 @@ export const highlightedProjects: Project[] = [
     volume24h: '450K', 
     participants: 3210, 
     tagline: 'Decentralized AI agent network for automated data flows.', 
-    image: '/assets/projects/highlights/highlight1.png',
+    image: '/assets/highlight1.png',
     highlightImage: '/assets/highlight1.png', 
     avatar: '/assets/avatar1.png' 
   },
@@ -50,7 +50,7 @@ export const highlightedProjects: Project[] = [
     volume24h: '220K', 
     participants: 2980, 
     tagline: 'Community DAO powering neural compute for decentralized apps.', 
-    image: '/assets/projects/highlights/highlight2.png',
+    image: '/assets/highlight2.png',
     highlightImage: '/assets/highlight2.png', 
     avatar: '/assets/avatar2.png' 
   },
@@ -65,7 +65,7 @@ export const highlightedProjects: Project[] = [
     volume24h: '150K', 
     participants: 1840, 
     tagline: 'Pixel-art inspired NFT minting ecosystem for creators.', 
-    image: '/assets/projects/highlights/highlight3.png',
+    image: '/assets/highlight3.png',
     highlightImage: '/assets/highlight3.png', 
     avatar: '/assets/avatar3.png' 
   },
@@ -80,7 +80,7 @@ export const highlightedProjects: Project[] = [
     volume24h: '360K', 
     participants: 2120, 
     tagline: 'Autonomous protocol defense network protecting DeFi from exploits.', 
-    image: '/assets/projects/highlights/highlight4.png',
+    image: '/assets/highlight4.png',
     highlightImage: '/assets/highlight4.png', 
     avatar: '/assets/avatar4.png' 
   },
@@ -95,7 +95,7 @@ export const highlightedProjects: Project[] = [
     volume24h: '410K', 
     participants: 2490, 
     tagline: 'Modular smart contract stack DAO for governance and composability.', 
-    image: '/assets/projects/highlights/highlight5.png',
+    image: '/assets/highlight5.png',
     highlightImage: '/assets/highlight5.png', 
     avatar: '/assets/avatar5.png' 
   },
@@ -110,7 +110,7 @@ export const highlightedProjects: Project[] = [
     volume24h: '520K', 
     participants: 3500, 
     tagline: 'DAO accelerator bridging early-stage founders with liquidity.', 
-    image: '/assets/projects/highlights/highlight6.png',
+    image: '/assets/highlight6.png',
     highlightImage: '/assets/highlight6.png', 
     avatar: '/assets/avatar6.png' 
   },
