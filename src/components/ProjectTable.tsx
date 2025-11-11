@@ -7,6 +7,12 @@ const formatCurrency = (value: string) => {
 }
 
 export const ProjectTable = () => {
+  const projectsWithRandomData = allProjects.map(p => ({
+    ...p,
+    marketCap: (Math.floor(Math.random() * (500000 - 10000 + 1)) + 10000).toString(),
+    volume: (Math.floor(Math.random() * 1000000)).toString(),
+  }));
+
   return (
     <section id="all-projects" className="py-24">
       <div className="container mx-auto max-w-6xl px-6">
@@ -36,7 +42,7 @@ export const ProjectTable = () => {
               </tr>
             </thead>
             <tbody>
-              {allProjects.map(p => (
+              {projectsWithRandomData.map(p => (
                 <tr key={p.id} className="border-b border-white/5 hover:bg-white/5">
                   <td className="p-4 flex items-center gap-3">
                     <img src={p.avatar} alt={p.name} className="w-8 h-8 rounded-full" />
