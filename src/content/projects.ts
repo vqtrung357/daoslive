@@ -3,8 +3,20 @@ export interface Project {
   symbol: string;
   name: string;
   marketCap: string;
-  highlightImage: string;
   avatar: string;
+  
+  // For new highlight cards
+  category?: string;
+  status?: 'Live' | 'Raising' | 'Closed';
+  raised?: string;
+  volume24h?: string;
+  tagline?: string;
+  image?: string;
+
+  // For old highlight cards (to be removed but keep for now)
+  highlightImage: string;
+
+  // For project table
   price?: string;
   change?: number;
   volume?: string;
@@ -12,12 +24,96 @@ export interface Project {
 }
 
 export const highlightedProjects: Project[] = [
-  { id: 'agent', symbol: '$AGENT', name: 'AgentAlgo', marketCap: '87.7M', highlightImage: '/assets/highlight1.png', avatar: '/assets/avatar1.png' },
-  { id: 'aixx', symbol: '$AIXX', name: 'NeuralDAO', marketCap: '64.2M', highlightImage: '/assets/highlight2.png', avatar: '/assets/avatar2.png' },
-  { id: 'mint', symbol: '$MINT', name: 'MintLab', marketCap: '32.5M', highlightImage: '/assets/highlight3.png', avatar: '/assets/avatar3.png' },
-  { id: 'sent', symbol: '$SENT', name: 'Sentinel', marketCap: '19.8M', highlightImage: '/assets/highlight4.png', avatar: '/assets/avatar4.png' },
-  { id: 'star', symbol: '$STAR', name: 'StarStack', marketCap: '51.4M', highlightImage: '/assets/highlight5.png', avatar: '/assets/avatar5.png' },
-  { id: 'aicc', symbol: '$AICC', name: 'AccelNet', marketCap: '88.7M', highlightImage: '/assets/highlight6.png', avatar: '/assets/avatar6.png' },
+  { 
+    id: 'agent', 
+    symbol: '$AGENT', 
+    name: 'AgentAlgo', 
+    category: 'AI Infrastructure', 
+    status: 'Live', 
+    marketCap: '87.7M', 
+    raised: '1.2M', 
+    volume24h: '450K', 
+    participants: 3210, 
+    tagline: 'Decentralized AI agent network for automated data flows.', 
+    image: '/assets/projects/highlights/highlight1.png',
+    highlightImage: '/assets/highlight1.png', 
+    avatar: '/assets/avatar1.png' 
+  },
+  { 
+    id: 'aixx', 
+    symbol: '$AIXX', 
+    name: 'NeuralDAO', 
+    category: 'Compute & Cloud', 
+    status: 'Raising', 
+    marketCap: '64.2M', 
+    raised: '980K', 
+    volume24h: '220K', 
+    participants: 2980, 
+    tagline: 'Community DAO powering neural compute for decentralized apps.', 
+    image: '/assets/projects/highlights/highlight2.png',
+    highlightImage: '/assets/highlight2.png', 
+    avatar: '/assets/avatar2.png' 
+  },
+  { 
+    id: 'mint', 
+    symbol: '$MINT', 
+    name: 'MintLab', 
+    category: 'NFT Labs', 
+    status: 'Closed', 
+    marketCap: '32.5M', 
+    raised: '2.5M', 
+    volume24h: '150K', 
+    participants: 1840, 
+    tagline: 'Pixel-art inspired NFT minting ecosystem for creators.', 
+    image: '/assets/projects/highlights/highlight3.png',
+    highlightImage: '/assets/highlight3.png', 
+    avatar: '/assets/avatar3.png' 
+  },
+  { 
+    id: 'sent', 
+    symbol: '$SENT', 
+    name: 'Sentinel', 
+    category: 'Security', 
+    status: 'Live', 
+    marketCap: '19.8M', 
+    raised: '1.0M', 
+    volume24h: '360K', 
+    participants: 2120, 
+    tagline: 'Autonomous protocol defense network protecting DeFi from exploits.', 
+    image: '/assets/projects/highlights/highlight4.png',
+    highlightImage: '/assets/highlight4.png', 
+    avatar: '/assets/avatar4.png' 
+  },
+  { 
+    id: 'star', 
+    symbol: '$STAR', 
+    name: 'StarStack', 
+    category: 'Infrastructure', 
+    status: 'Raising', 
+    marketCap: '51.4M', 
+    raised: '760K', 
+    volume24h: '410K', 
+    participants: 2490, 
+    tagline: 'Modular smart contract stack DAO for governance and composability.', 
+    image: '/assets/projects/highlights/highlight5.png',
+    highlightImage: '/assets/highlight5.png', 
+    avatar: '/assets/avatar5.png' 
+  },
+  { 
+    id: 'aicc', 
+    symbol: '$AICC', 
+    name: 'AccelNet', 
+    category: 'Accelerator', 
+    status: 'Live', 
+    marketCap: '88.7M', 
+    raised: '1.5M', 
+    volume24h: '520K', 
+    participants: 3500, 
+    tagline: 'DAO accelerator bridging early-stage founders with liquidity.', 
+    image: '/assets/projects/highlights/highlight6.png',
+    highlightImage: '/assets/highlight6.png', 
+    avatar: '/assets/avatar6.png' 
+  },
 ];
 
 export const allProjects: Project[] = [
