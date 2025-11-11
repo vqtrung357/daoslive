@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 export const HeroSection = () => {
   return (
     <section 
-      className="relative -mt-[86px] pt-[86px] h-[600px] flex items-center bg-cover bg-center bg-[url('/assets/banner-hero.png')]"
+      className="relative -mt-[86px] pt-[86px] h-[600px] flex items-center bg-cover bg-center bg-[url('/assets/Hero%20Banner.jpg')]"
     >
       <div className="absolute inset-0 bg-black/60"></div>
       <div className="relative container mx-auto max-w-6xl px-6">
