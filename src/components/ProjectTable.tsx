@@ -17,9 +17,9 @@ export const ProjectTable = () => {
     <section id="all-projects" className="py-24">
       <div className="container mx-auto max-w-6xl px-6">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
-          <Input placeholder="Search..." className="max-w-xs bg-surface border-white/10" />
+          <Input placeholder="Search..." className="w-full md:max-w-xs bg-surface border-white/10" />
           <Select defaultValue="7d">
-            <SelectTrigger className="w-[180px] bg-surface border-white/10">
+            <SelectTrigger className="w-full md:w-[180px] bg-surface border-white/10">
               <SelectValue placeholder="Time range" />
             </SelectTrigger>
             <SelectContent className="bg-surface border-white/10 text-text-primary">
