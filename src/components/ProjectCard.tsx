@@ -88,7 +88,6 @@ export const ProjectCard = ({ project }: { project: Project }) => {
               src={project.image}
               alt={`${project.name} cover image`}
               className="w-full h-full object-cover scale-[1.02] transition-transform duration-500 md:group-hover:scale-105 md:group-hover:brightness-90"
-              onError={() => setImageError(true)}
             />
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
